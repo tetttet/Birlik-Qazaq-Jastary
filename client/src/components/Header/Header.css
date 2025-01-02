@@ -1,0 +1,127 @@
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
+    color: #333;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Header при скролле */
+.header.scrolled {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px; /* Уменьшаем отступы */
+}
+
+/* Основной контент */
+body {
+    padding-top: 70px; /* Увеличено, чтобы не перекрывать header */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Логотип */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #333;
+    text-transform: uppercase;
+    min-width: 120px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+    color: #555;
+}
+
+/* Ссылки Navbar */
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Media Queries */
+
+/* Ширина менее 992px */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+        margin-bottom: 10px; /* Добавляем отступ для логотипа */
+        display: block; /* Оставляем логотип видимым */
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 10px 0;
+        padding: 10px 15px;
+        width: 100%; /* Ссылки занимают всю ширину */
+        text-align: left; /* Выравниваем текст по левому краю */
+    }
+}
+
+/* Ширина менее 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch; /* Ссылки растягиваются по ширине */
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin: 5px 0;
+        padding: 10px 12px;
+    }
+}
+
+/* Ширина менее 480px */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .navbar .logo {
+        font-size: 16px;
+        text-align: center; /* Центрируем логотип */
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 8px 10px;
+        margin: 5px 0;
+    }
+}

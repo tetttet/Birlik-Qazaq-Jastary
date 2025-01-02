@@ -1,0 +1,125 @@
+.sliderContainer {
+  width: 100vw; /* Контейнер занимает всю ширину экрана */
+  max-width: 100vw;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px; /* Отступ сверху */
+  background-color: #000; /* Фон для слайдера */
+}
+
+.sliderList {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  transition: transform 1.5s ease-in-out; /* Плавное движение слайдов */
+}
+
+.sliderItem img {
+  width: 100vw; /* Изображение занимает всю ширину экрана */
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover; /* Изображение заполняет слайд, сохраняя пропорции */
+}
+
+.sliderButtons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  z-index: 2; /* Кнопки всегда поверх изображений */
+}
+
+.sliderButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный фон */
+  color: #333;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Плавная смена фона */
+}
+
+.sliderButton:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.sliderDots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sliderDot {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.sliderDotActive {
+  width: 20px;
+  background-color: #333;
+}
+
+/* Респонсив для экранов меньше 768px */
+@media screen and (max-width: 768px) {
+  .sliderContainer {
+    height: 350px; /* Уменьшаем высоту */
+  }
+
+  .sliderButton {
+    width: 35px;
+    height: 35px; /* Уменьшаем кнопки */
+  }
+
+  .sliderDot {
+    width: 8px;
+    height: 8px; /* Уменьшаем точки */
+    margin: 4px;
+  }
+
+  .sliderDotActive {
+    width: 15px;
+  }
+}
+
+/* Респонсив для экранов меньше 480px (телефоны) */
+@media screen and (max-width: 480px) {
+  .sliderContainer {
+    height: 300px; /* Ещё меньше высота */
+  }
+
+  .sliderButton {
+    width: 30px;
+    height: 30px; /* Ещё меньше кнопки */
+  }
+
+  .sliderDots {
+    bottom: 5px; /* Уменьшаем отступ снизу */
+  }
+
+  .sliderDot {
+    width: 6px;
+    height: 6px;
+    margin: 3px;
+  }
+
+  .sliderDotActive {
+    width: 12px;
+  }
+}

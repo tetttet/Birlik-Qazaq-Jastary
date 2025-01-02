@@ -1,0 +1,234 @@
+/* Базовые стили — остаются как есть */
+.headerbar-breadcrumb-wrapper {
+    background-color: #f8f9fa; /* Фон растягивается на весь экран */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerbar-breadcrumb {
+    font-size: 14px;
+    color: #6c757d;
+    padding: 10px 0;
+    margin-top: 60px;
+}
+
+.headerbar-breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 5px;
+}
+
+.headerbar-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.headerbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerbar-logo {
+    display: flex;
+    gap: 10px;
+}
+
+.headerbar-logo div {
+    background-color: #0967e2;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.headerbar-search-container {
+    display: flex;
+    align-items: center;
+}
+
+.headerbar-search-container input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.headerbar-search-container button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.headerbar-search-container button:hover {
+    background-color: #0056b3;
+}
+
+.headerbar-questions {
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.headerbar-questions:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.headerbar-navMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}
+
+.headerbar-navItem {
+    position: relative;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.headerbar-navItem a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.headerbar-navItem a:hover {
+    text-decoration: underline;
+}
+
+.headerbar-dropdown {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.headerbar-dropdown a {
+    display: inline-block;
+    margin: 5px 10px;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.headerbar-dropdown a:hover {
+    text-decoration: underline;
+}
+
+.headerbar-dropdownIcon {
+    font-size: 16px;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.headerbar-dropdownIcon:hover {
+    color: #0056b3;
+}
+
+/* --------- Адаптивная верстка для мобильных устройств --------- */
+@media (max-width: 768px) {
+    /* Уменьшаем отступы */
+    .headerbar-breadcrumb-wrapper,
+    .headerbar-header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Логотип и элементы заголовка */
+    .headerbar-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerbar-logo {
+        margin-bottom: 10px;
+    }
+
+    /* Поиск */
+    .headerbar-search-container input {
+        width: 100%;
+    }
+
+    .headerbar-search-container {
+        width: 100%;
+    }
+
+    /* Вопросы */
+    .headerbar-questions {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Навигационное меню */
+    .headerbar-navMenu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerbar-navItem {
+        margin: 10px 0;
+    }
+
+    .headerbar-dropdown {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Еще больше уменьшаем размеры и отступы */
+    .headerbar-breadcrumb {
+        font-size: 12px;
+        margin-top: 50px;
+    }
+
+    .headerbar-header {
+        align-items: stretch;
+    }
+
+    .headerbar-search-container button {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .headerbar-dropdown a {
+        font-size: 12px;
+    }
+
+    .headerbar-navItem a {
+        font-size: 12px;
+    }
+
+    .headerbar-questions {
+        padding: 5px;
+        font-size: 12px;
+    }
+}

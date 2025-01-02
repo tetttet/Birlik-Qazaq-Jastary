@@ -1,0 +1,135 @@
+.sliderContainer {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Скрываем элементы за пределами контейнера */
+}
+
+.cardItem {
+    padding: 10px;
+    flex: 1 0 25%; /* Базовый размер карточки - 25% */
+    box-sizing: border-box;
+}
+
+.cardLink {
+    display: block;
+    background: #fff;
+    padding: 20px;
+    user-select: none;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardLink:hover {
+    transform: translateY(-5px); /* Эффект поднятия карточки при наведении */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1); /* Увеличенная тень */
+}
+
+.cardImage {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    height: 250px;
+}
+
+.badge {
+    color: #5372F0;
+    width: fit-content;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    font-weight: 500;
+    background: #DDE4FF;
+    margin: 16px 0 18px;
+}
+
+.cardTitle {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 10px 0; /* Добавлен отступ сверху и снизу */
+}
+
+.cardButton {
+    height: 40px;
+    padding: 0 20px;
+    color: #5372F0;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #5372F0;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.cardButton:hover {
+    color: #fff;
+    background: #5372F0;
+}
+
+/* Стрелки */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prevArrow {
+    left: 10px;
+}
+
+.nextArrow {
+    right: 10px;
+}
+
+.slick-prev,
+.slick-next {
+    display: none; /* Скрываем стандартные стрелки */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .cardItem {
+        flex: 1 0 50%; /* На планшетах показывать 2 карточки */
+    }
+
+    .cardImage {
+        height: 200px; /* Уменьшенная высота изображения */
+    }
+}
+
+@media (max-width: 480px) {
+    .cardItem {
+        flex: 1 0 100%; /* На телефонах показывать 1 карточку */
+    }
+
+    .cardImage {
+        height: 150px; /* Еще меньше для телефонов */
+    }
+
+    .arrow {
+        font-size: 1.5rem; /* Уменьшенный размер стрелок */
+        padding: 8px;
+    }
+}

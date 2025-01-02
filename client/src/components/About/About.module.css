@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.aboutUs {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    height: auto;
+    width: 100%;
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.pic {
+    width: 800px;
+    /* Increased width */
+    border-radius: 12px;
+    padding-right: 20px;
+}
+
+.about {
+    width: 1400px;
+    /* Increased container width */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text {
+    width: 700px;
+    /* Increased width */
+}
+
+.text h3 {
+    color: #333;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.text h5 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #4070f4;
+}
+
+.text p {
+    color: #333;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.data {
+    margin-top: 30px;
+}
+
+.aboutBtn {
+    font-size: 20px;
+    /* Increased font size */
+    background: #4070f4;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 15px 30px;
+    /* Increased padding */
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.aboutBtn:hover {
+    background: #000;
+}
+
+
+/* --------- Адаптивная верстка --------- */
+@media (max-width: 1024px) {
+    .about {
+        flex-direction: column; /* Элементы располагаются в колонку */
+        text-align: center;
+    }
+
+    .pic {
+        width: 100%; /* Растягиваем изображение */
+        margin-bottom: 20px; /* Добавляем отступ снизу */
+        padding-right: 0;
+    }
+
+    .text {
+        width: 90%; /* Уменьшаем ширину текста */
+        margin: 0 auto;
+    }
+
+    .text h3 {
+        font-size: 40px; /* Уменьшаем размер заголовка */
+    }
+
+    .text h5 {
+        font-size: 18px;
+    }
+
+    .text p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .aboutBtn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text h3 {
+        font-size: 30px; /* Еще больше уменьшаем заголовок */
+    }
+
+    .text h5 {
+        font-size: 16px;
+    }
+
+    .text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .aboutBtn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text h3 {
+        font-size: 24px; /* Адаптируем заголовок под маленькие экраны */
+    }
+
+    .text h5 {
+        font-size: 14px;
+    }
+
+    .text p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .aboutBtn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}

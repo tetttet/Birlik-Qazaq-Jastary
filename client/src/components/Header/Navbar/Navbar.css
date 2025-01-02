@@ -1,0 +1,47 @@
+.language-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding-right: 20px;
+}
+
+.language-container .language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.language-container .language-selector:hover {
+    transform: scale(1.1); /* Легкое увеличение при наведении */
+}
+
+@media (max-width: 640px) {
+    .language-container {
+        position: relative;
+        padding-right: 10px;
+    }
+
+    .language-container .language-selector {
+        position: fixed; /* Фиксируем флаг для удобства */
+        top: 10px;
+        right: 10px;
+        z-index: 1000; /* Флаг остается поверх остальных элементов */
+        width: 30px; /* Уменьшаем размер для мобильных устройств */
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-container {
+        justify-content: center; /* Центрируем контейнер на очень маленьких экранах */
+        padding: 0;
+    }
+
+    .language-container .language-selector {
+        width: 25px; /* Еще больше уменьшаем размер */
+        height: 15px;
+    }
+}
